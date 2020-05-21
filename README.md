@@ -8,7 +8,7 @@ If you find this useful, please donate BTC at [1JK27jtvE1wS4VG9k7Zpo8wBufMbYwy3r
 - [Summary](#summary)
 - [Tools](#tools)
 - [Hints](#hints)
-- [Decentraland](#decentraland)
+- [Additional hints](#additional-hints)
 
 ![puzzle image](./puzzle.png)
 
@@ -286,9 +286,20 @@ output: NODHVKRFBSHOHPKLFDGHDQLMNVLMKUGNTHLKQKRVCKJFOPLFMHJAHOECKLLKGMHJAHOELMKR
 
 output: IN CASE YOU MANAGE TO CRACK THIS THE PRIVATE KEYS BELONG TO HALF AND BETTER HALF AND THEY ALSO NEED FUNDS TO LIVE
 
-# Decentraland
-The creator of the puzzle made a hint:
+# Additional hints
+- There's a hint from the creator of the puzzle on Decentraland:
 ![decentraland image](./photo_2020-04-26_09-24-30.jpg)
 If you go to Decentraland and find these coordinates, you'll get an audio file.
 Split stereo track, invert one of them, mix them back, mix stereo down to mono, create a spectrogram. The answer is:
 HASHTHETEXT
+
+- Another hint from the creator:
+```
+Roses are White but often Red.
+Yellow has a number and so does Blue.
+Go back to the first puzzle piece without further ado.
+
+It might have shown you only one door, beware that the rabbits nest may contain a whole lot more.
+
+Hush hush.
+```
