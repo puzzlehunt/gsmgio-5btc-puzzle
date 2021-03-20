@@ -84,7 +84,7 @@ What you get is: gsmg.io/theseedisplanted
 
 ![theseedisplanted.png](./theseedisplanted.png)
 
-The pictures refer to the song Phases (by 2 Best Enemies).
+The pictures refer to the song [The Warning (by Logic)](https://www.rockol.com/uk/lyrics-61092449/logic-the-warning-inner-mix?refresh_ce) which you can see by rearranging the images: war + ning and LO + (crypto) gic. 
 This webpage contains a hidden POST form which can be accessed in the browser debug mode (F12 in chrome).
 You need to unhide it, enter the password theflowerblossomsthroughwhatseemstobeaconcretesurface and hit Submit button.
 You'll be redirected to the next step.
@@ -120,7 +120,52 @@ Ok kid, on the highway, let put it in the worst gear.
 ```
 
 It is unclear how to use X 2 S H 4 Y 0 Q B 15, but it was observed that S is Klingon numbers 2+(5*6)=32 and BV80605001911AP is a model of Intel i5 processor, hence B=(5i-i)^2=(4i)^2=-16.
-Using the other hints (2name, 3Moon, 4How so mate), you can decrypt the next phase. The password is a concatenation of 7 parts. The first part is causality.
+Using the other hints (2name, 3Moon, 4How so mate) which are a reference to a [Thales Hardware Security Module](https://thalesdocs.com/gphsm/luna/10.1/docs/network/Content/Product_Overview/the_safenet_hsm/the_safenet_hsm.htm), you can decrypt the next phase. The password is a concatenation of 7 parts. The first part is causality.
+
+For part 5, you have to follow the ramblings, (these are a bit of a stretch)
+
+> There's a guy who theorised the idea that 'Any linear electrical network with voltage and current sources and only resistances can be replaced at terminals A–B by an equivalent current source Ino in parallel connection with an equivalent resistance Rno'. 
+- Norton's theorem
+
+> ruler of a piece of land that's technically the poorest of the entire planet
+- Probably the USA due to foriegn debt
+
+> 4 rulers have shared the first name of the competition.
+- USA had four presidents with the first name "John"
+
+> 2 had the firstname in the surname
+- USA had 2 presidents with the last name "Johnson"
+
+> One of the rulers had a number, and dirty too
+- JFK (John Fitzgerald Kennedy)
+
+> The one after died too soon. 
+- JFK? "A president may have executed a specific order.")
+- https://en.wikipedia.org/wiki/List_of_United_States_federal_executive_orders#John_F._Kennedy_(1961%E2%80%931963)
+
+> Moral: never execute an order that revokes the highest power or you might suddenly get killed. The 5binary code is a part of the piece of this puzzle.
+
+There are two executive orders by JFK that look like 5 digit binary "11110" and 11111", however, [EO 1110](https://en.wikipedia.org/wiki/Executive_Order_11110) was to "\[try] to rein in the power of the Federal Reserve" and may have been a reason for his assassination.
+
+Part 6:
+> Its' raw data after 4 on row 1616 to be one of the last pieces of this part required in order to continue this riddle.
+Is a reference to the genesis block, and the [source code to bitcoin itself](https://sourceforge.net/p/bitcoin/code/133/tree/trunk/main.cpp#l1616)
+```c
+// line 1616 of main.cpp
+// txNew.vin[0].scriptSig     = 486604799 4 0x736B6E616220726F662074756F6C69616220646E6F63657320666F206B6E697262206E6F20726F6C6C65636E61684320393030322F6E614A2F33302073656D695420656854
+```
+
+At this point you see "/(aBa, connected enf)" which is the puzzle's way of saying: don't change the casing of the input (aBa) and remove whitespace (connected enf)
+
+Part 7:
+> B5KR/1r5B/6R1/2b1p1p1/2P1k1P1/1p2P2p/1P2P2P/3N1N2 w - - 0 1
+>
+> And now a buddhist is forced to move. What will be the next situation?
+
+This part displays [chess board position](https://en.wikipedia.org/wiki/Algebraic_notation_(chess)) and is asking the position of the board after making a move that will not result in mate (a buddhist move). It's a fairly well known problem in chess and searching for the chess position quoted will give you:
+> B5KR/1r5B/2R5/2b1p1p1/2P1k1P1/1p2P2p/1P2P2P/3N1N2 b - - 0 1
+
+and here you'll see "/(aBa, connected not enf)" meaning: don't change the casing of input (aBa) but keep the whitespace (connected not enf)
 
 ![phase3.png](./phase3.png)
 
@@ -241,6 +286,9 @@ U2FsdGVkX1+0Wl49gnWTyiimluu7V3+vl7st0gUt9sWDzNLxDmlPMsDSiuW2a46z
 gKlIi8aaqY5gpJPPEzW1n9n3/26qs4zstWtPKF8Zs/BTNN4IiEh4qu18mdC0NAv4
 ```
 
+"... am I here? Wake up, you..." is your first clue, it's a direct quote from the first matrix movie "Why am I here? Wake up, Neo. The matrix has you" (often in the gsmg puzzle, "neo" is replaced with "you"
+
+The next clue is "I've designed you a beautiful strategic position" hinting at a "beautiful" -> "beaufort" cipher, where as "One for one, four for one" hints at the encoding. one for one, four for one -> 1 for 1, 4 for 1 -> 1141 -> IBM EBCDIC 1141 encoding
 
 - phase 3.2.1
 The first blob (╬╚,╬°%_....) converted to letters:
@@ -273,17 +321,21 @@ HOPE YOURE THE ONE CIAO BELLA O
 ```
 
 - phase 3.2.2
+
 input: 15165943121972409169171213758951813141543131412428154191312181219433121171617137149110916631213131281491109166131412199114371612126021664313711154112
 
-1) https://www.dcode.fr/vic-cipher 
+The alphabet is hinted at in the following sentence: A fubcd-king & oracle-queen, thingky mvps, on a sad board but as wide as the first one seen.
 
-alphabet: ABCDEFGHIJKLMNOPQRSTUVWXYZ./
+- fubcd-king & oracle-queen, thingky mvps
+- FUBCD ORACLE THINGKY MVPS
+- (removing repeated characaters): FUBCD ORA.LE THINGKY MVPS
+- (adding the rest of the alphabet): FUBCDORA.LETHINGKYMVPS/JQZXW
+
+https://www.dcode.fr/vic-cipher 
+
+alphabet: FUBCDORA.LETHINGKYMVPS.JQZXW
 digit 1: 1
 digit 2: 4
-
-output: NODHVKRFBSHOHPKLFDGHDQLMNVLMKUGNTHLKQKRVCKJFOPLFMHJAHOECKLLKGMHJAHOELMKRHJVFOKKEABOEVLFJNTK
-
-2) https://guballa.de/substitution-solver
 
 output: IN CASE YOU MANAGE TO CRACK THIS THE PRIVATE KEYS BELONG TO HALF AND BETTER HALF AND THEY ALSO NEED FUNDS TO LIVE
 
@@ -304,3 +356,5 @@ It might have shown you only one door, beware that the rabbits nest may contain 
 
 Hush hush.
 ```
+
+Hashing the text gets you to the next phase, SalPhaseIon & Cosmic Duality. Which text to hash, and which door to insert it into is not currently public knowledge, and is left to the reader to discover.
