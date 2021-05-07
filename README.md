@@ -356,5 +356,10 @@ It might have shown you only one door, beware that the rabbits nest may contain 
 
 Hush hush.
 ```
+Go to the first puzzle piece (https://gsmg.io/puzzle) and hash the text there.
+```
+SHA256(GSMGIO5BTCPUZZLECHALLENGE1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe) = 89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32
+```
+The resulting hash leads to the SalPhaseIon and Cosmic Duality phase https://gsmg.io/89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32
 
-Hashing the text gets you to the next phase, SalPhaseIon & Cosmic Duality. Which text to hash, and which door to insert it into is not currently public knowledge, and is left to the reader to discover.
+![salphaselon image](./SalPhaselonCosmicDuality.png)
