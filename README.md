@@ -363,3 +363,34 @@ SHA256(GSMGIO5BTCPUZZLECHALLENGE1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe) = 89727c598b
 The resulting hash leads to the SalPhaseIon and Cosmic Duality phase https://gsmg.io/89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32
 
 ![salphaselon image](./SalPhaselonCosmicDuality.png)
+
+## Salphaseion
+
+This phase can be split into multiple sections, only some are currently decoded
+
+> d b b i b f b h c c b e g b i h a b e b e i h b e g g e g e b e b b g e h h e b h h f b a b f d h b e f f c d b b f c c c g b f b e e g g e c b e d c i b f b f f g i g b e e e a b e **a b b a b b a b a b b a a a a b a b b b a b a a a b b b a a b a a b b a b a a b a b b b b a a a a b b b a a b b a b b b a b a b a b b a b b a b a b b a b b a a a b b a b a a b a b b b a a b b a b b b a b a a**  f a e d g g e e d f c b d a b h h g g c a d c f e d d g f d g b g i g a a e d g g i a f a e c g h g g c d a i h e h a h b a h i g c e i f g b f g e f g a i f a b i f a g a e g e a c g b b e a g f g g e e g g a f b a c g f c d b e i f f a a f c i d a h g d e e f g h h c g g a e g d e b h h e g e g h c e g a d f b d i a g e f c i c g g i f d c g a a g g f b i g a i c f b h e c a e c b c e i a i c e b g b g i e c d e g g f g e g a e d g g f i i c i i i f i f h g g c g f g d c d g g e f c b e e i g e f i b g i b g g g h h f b c g i f d e h e d f d a g i c d b h i c g a i e d a e h a h g h h c i h d g h f h b i i c e c b i i c h i h i i i g i d d g e h h d f d c h c b a f g f b h a h e a g e g e c a f e h g c f g g g g c a g f h h g h b a i h i d i e h h f d e g g d g c i h g g g g g h a d a h i g i g b g e c g e d f c d g g a c c d e h i i c i g f b f f h g g a e i d b b e i b b e i i f d g f d h i e e e i e e e c i f d g d a h d i g g f h e g f i a f f i g g b c b c e h c e a b f b e d b i i b f b f d e d e e h g i g f a a i g g a g b e i i c h i e d i f b e h g b c c a h h b i i b i b b i b d c b a h a i d h f a h i i h i c **z** a g d a f a o a h e i e c g g c h g i c b b h c g b e h c f c o a b i c f d h h c d b b c a g b d a i o b b g b e a d e d d e **z** c f o b f d h g d o b d g o o i i g d o c d a o o f i d h **z** s h a b e f o u r f i r s t h i n t i s y o u r l a s t c o m m a n d 
+> U 2 F s d G V k X 1 8 6 t Y U 0 h V J B X X U n B U O 7 C 0 + X 4 K U W n W k C v o Z S x b R D 3 w N s G W V H e f v d r d 9 z **a b b a a b a b a b b a b b b a a b b b a b a a a b b a a b a b a b b b a a b a** Q v X 0 t 8 v 3 j P B 4 o k p s p x e b R i 6 s E 1 B M l 5 H I 8 R k u + K e j U q T v d W O X 6 n Q j S p e p X w G u N / j J 
+> s h a b e f a n s t o o
+
+The two "abba" sections can be decoded first, where we translate a=0, b=1, and interpret the resulting string as binary representation of ascii characters:
+
+[a b b a b b a b a b b a a a a b a b b b a b a a a b b b a a b a a b b a b a a b a b b b b a a a a b b b a a b b a b b b a b a b a b b a b b a b a b b a b b a a a b b a b a a b a b b b a a b b a b b b a b a a](https://gchq.github.io/CyberChef/#recipe=Remove_whitespace(true,true,true,true,true,false)Substitute('ab','01')From_Binary('Space',8)&input=YSBiIGIgYSBiIGIgYSBiIGEgYiBiIGEgYSBhIGEgYiBhIGIgYiBiIGEgYiBhIGEgYSBiIGIgYiBhIGEgYiBhIGEgYiBiIGEgYiBhIGEgYiBhIGIgYiBiIGIgYSBhIGEgYSBiIGIgYiBhIGEgYiBiIGEgYiBiIGIgYSBiIGEgYiBhIGIgYiBhIGIgYiBhIGIgYSBiIGIgYSBiIGIgYSBhIGEgYiBiIGEgYiBhIGEgYiBhIGIgYiBiIGEgYSBiIGIgYSBiIGIgYiBhIGIgYSBh) -> "matrixsumlist"
+
+[a b b a a b a b a b b a b b b a a b b b a b a a a b b a a b a b a b b b a a b a](https://gchq.github.io/CyberChef/#recipe=Remove_whitespace(true,true,true,true,true,false)Substitute('ab','01')From_Binary('Space',8)&input=YSBiIGIgYSBhIGIgYSBiIGEgYiBiIGEgYiBiIGIgYSBhIGIgYiBiIGEgYiBhIGEgYSBiIGIgYSBhIGIgYSBiIGEgYiBiIGIgYSBhIGIgYQ) -> "enter"
+
+Next, we see two occurances of "shabef", and the English text "our first hint is your last command". To get into Salphaseion, we had to sha256() a string, which gives us the mapping shabef=sha256 -> b=2,e=5, f=6, or, a=1 .. z = 26. But, the rest of the text doesn't seem to decode the same way. We notice that "z" seems to be a separator for various segments, and comes before other substrings, we have:
+1. a g d a f a o a h e i e c g g c h g i c b b h c g b e h c f c o a b i c f d h h c d b b c a g b d a i o b b g b e a d e d d e
+2. c f o b f d h g d o b d g o o i i g d o c d a o o f i d h
+
+Again, using a1z26 doesn't seem to get us anywhere, but if we look at which characters are available it will give us a clue. "a" through "i" and "o", 10 characters, and we know that a=1, and i=9, we can guess that "o" is "0", this updates our decode to:
+1. 174161018595377387932283725836301293648834223172419022725145445
+2. 36026487402470099740341006948
+
+Through some trial and error, we find that these need to be shifted to base 16, then decoded as hex representation of ascii
+1. [lastwordsbeforearchichoice](https://gchq.github.io/CyberChef/#recipe=Remove_whitespace(true,true,true,true,true,false)Substitute('abcdefghio','1234567890')To_Base(16)From_Hex('Auto')&input=YSBnIGQgYSBmIGEgbyBhIGggZSBpIGUgYyBnIGcgYyBoIGcgaSBjIGIgYiBoIGMgZyBiIGUgaCBjIGYgYyBvIGEgYiBpIGMgZiBkIGggaCBjIGQgYiBiIGMgYSBnIGIgZCBhIGkgbyBiIGIgZyBiIGUgYSBkIGUgZCBkIGU)
+2. [thispassword](https://gchq.github.io/CyberChef/#recipe=Remove_whitespace(true,true,true,true,true,false)Substitute('abcdefghio','1234567890')To_Base(16)From_Hex('Auto')&input=IGMgZiBvIGIgZiBkIGggZyBkIG8gYiBkIGcgbyBvIGkgaSBnIGQgbyBjIGQgYSBvIG8gZiBpIGQgaA)
+
+### AES Blob
+The following follows the same formatting as previous openssl base64-encoded AES blobs that we encounted in previous stages
+> U 2 F s d G V k X 1 8 6 t Y U 0 h V J B X X U n B U O 7 C 0 + X 4 K U W n W k C v o Z S x b R D 3 w N s G W V H e f v d r d 9 z
+> Q v X 0 t 8 v 3 j P B 4 o k p s p x e b R i 6 s E 1 B M l 5 H I 8 R k u + K e j U q T v d W O X 6 n Q j S p e p X w G u N / j J
