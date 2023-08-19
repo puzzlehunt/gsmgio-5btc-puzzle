@@ -2,13 +2,43 @@
 
 This repository contains all publicly known hints for GSMG.IO 5 BTC puzzle challenge. Contributions are welcome!
 
-If you find this useful, please donate BTC at [1JK27jtvE1wS4VG9k7Zpo8wBufMbYwy3r8](https://www.blockchain.com/btc/address/1JK27jtvE1wS4VG9k7Zpo8wBufMbYwy3r8)
+If you find this useful, please donate BTC at [bc1qla7lmz3guzz3cezhfl72r0w546a4gyacpu530r](https://www.blockchain.com/btc/address/bc1qla7lmz3guzz3cezhfl72r0w546a4gyacpu530r)
 
 
 - [Summary](#summary)
 - [Tools](#tools)
-- [Hints](#hints)
-- [Additional hints](#additional-hints)
+- Walkthrough
+  1. [Phase 0](#phase-0---the-bunny-image) | [Notebook](./phase0.ipynb)
+  2. [Phase 1](#phase-1---the-warning) | [Notebook](./phase1.ipynb)
+  3. [Phase 2](#phase-2---mr-robot) | [Notebook](./phase2.ipynb)
+     * [Phase 2.1](#phase-21)
+     * [Phase 2.2](#phase-22)
+  4. [Phase 3](#phase-3---free-will) | [Notebook](./phase3.ipynb)
+  5. [Phase 3.2](#phase-32) | [Notebook](./phase3.2.ipynb)
+  6. [Decentraland and the path to SalPhaseIon](#salphaseion) | [Notebook](./decentraland.ipynb)
+  7. [SalPhaseIon](#salphaseion) | [Notebook](./salphaseion.ipynb)
+  8. [Cosmic Duality](#cosmic-duality)
+- [Further Hints and 2020-present Timeline](#further-hints-and-2020-present-timeline)
+  1. [2020-01-14](#2020-01-14-hint): Official Hint - Roses are Red Poem
+  2. [2020-02-20](#2020-02-20-hint): Official Hint - Decentraland
+  3. [2020-04-08](#2020-04-08)
+  4. [2020-05-11](#2020-05-11): Bitcoin Halving
+  5. [2020-06-07](#2020-06-07): First SalPhaseIon mention
+  6. [2020-08-02](#2020-08-02): First mention of another door
+  7. [2021-01-21](#2021-01-21)
+  8. [2021-02-12](#2021-02-12)
+  9. [2021-03-01](#2021-03-01): Spelling and primes
+  10. [2021-03-14](#2021-03-14): Salph is the last phase
+  11. [2021-04-01](#2021-04-01): April Fools
+  12. [2021-05-06](#2021-05-06): Instructions for entry into SalPhaseIon
+  13. [2021-12-02](#2021-12-02-hint): Official Hint about another door
+  14. [2021-12-26](#2021-12-26-christmas-hint): Official Hint
+  15. [2022-12-10](#2022-12-10): Book cover about Cosmic Duality
+  16. [2023-01-09](#2023-01-09)
+  17. [2023-01-12](#2023-01-12---hint): Semi-Official Hint - prime number is a hint
+  18. [2023-02-23](#2023-02-23---official-hint): Official Hint - Reverse binary string
+  19. [2023-08-03](#2023-08-03-hint): Official Hint - Are you really looking for the btc...?
+  20. [2023-08-06](#2023-08-06-hint): Official Hint - The puzzle speaks for me
 
 ![puzzle image](./puzzle.png)
 
@@ -17,10 +47,13 @@ If you find this useful, please donate BTC at [1JK27jtvE1wS4VG9k7Zpo8wBufMbYwy3r
 - The prize address with 5 BTC is [1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe](https://www.blockchain.com/btc/address/1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe)
 (The creator of the puzzle intended to halve the prize each time Bitcoin halving occurs. It happened for the first time on May 11, 2020, the current value is 2.5 BTC)
 - Discussions on Reddit: [gsmgio_5_btc_puzzle](https://www.reddit.com/r/bitcoinpuzzles/comments/dfwcqk/gsmgio_5_btc_puzzle/), [gsmgio_5_btc_puzzle_challenge](https://www.reddit.com/r/bitcoinpuzzles/comments/bf7siz/gsmgio_5_btc_puzzle_challenge/)
+- Telegram channel: [invite link](https://t.me/joinchat/AJXEwEWK9gvhxwkgeXJUVw)
 
 # Tools
 - SHA256 online tool - https://xorbin.com/tools/sha256-hash-calculator
 - To decypher AES encrypted text, use https://www.openssl.org/
+- Online cipher tools: https://www.dcode.fr/en
+- Various manipulations of text and data: https://gchq.github.io/CyberChef/
 ```
 Useful OpenSSL flags:
 -d decrypts data
@@ -29,324 +62,111 @@ Useful OpenSSL flags:
 -out <filename> specifies the file to put the decrypted data in
 ```
 
-# Hints
-
-## 1. https://gsmg.io/puzzle
-Squares are bits, black/blue - '1' and yellow/white - '0'. It's a 14x14 binary matrix:
-
-```
-0 0 1 1 0 1 0 0 1 0 1 1 0 0
-1 1 1 1 0 0 1 1 1 0 1 0 1 1
-1 1 0 1 1 1 0 1 0 0 1 0 0 1
-0 1 1 0 1 0 0 0 0 1 1 1 0 1
-0 1 1 0 0 0 1 1 0 0 0 1 1 0
-1 0 0 1 1 0 0 0 1 0 0 0 1 1
-1 0 0 1 1 1 0 0 0 1 0 0 0 0
-1 1 1 0 0 0 0 0 0 0 1 0 0 0
-0 0 0 1 1 1 0 1 1 1 1 1 0 1
-1 1 1 1 1 1 0 0 1 1 0 0 0 1
-1 1 0 1 0 0 0 0 0 1 1 0 1 1
-1 1 1 1 0 0 1 0 1 0 1 1 0 0
-0 1 0 1 1 1 0 1 0 0 0 1 1 0
-0 1 1 0 1 1 0 1 1 0 1 0 1 1
-```
-
-Start from upper left square and go counterclockwise in a spiral. Convert the bits to ASCII characters:
-
-01100111 (103 g)
-01110011 (115 s)
-01101101 (109 m)
-01100111 (103 g)
-00101110 (46 .)
-01101001 (105 i)
-01101111 (111 o)
-00101111 (47 /)
-01110100 (116 t)
-01101000 (104 h)
-01100101 (101 e)
-01110011 (115 s)
-01100101 (101 e)
-01100101 (101 e)
-01100100 (100 d)
-01101001 (105 i)
-01110011 (115 s)
-01110000 (112 p)
-01101100 (108 l)
-01100001 (97 a)
-01101110 (110 n)
-01110100 (116 t)
-01100101 (101 e)
-01100100 (100 d)
-
-What you get is: gsmg.io/theseedisplanted
-
-## 2. https://gsmg.io/theseedisplanted
-
-![theseedisplanted.png](./theseedisplanted.png)
-
-The pictures refer to the song [The Warning (by Logic)](https://www.rockol.com/uk/lyrics-61092449/logic-the-warning-inner-mix?refresh_ce) which you can see by rearranging the images: war + ning and LO + (crypto) gic. 
-This webpage contains a hidden POST form which can be accessed in the browser debug mode (F12 in chrome).
-You need to unhide it, enter the password theflowerblossomsthroughwhatseemstobeaconcretesurface and hit Submit button.
-You'll be redirected to the next step.
+# Walkthrough
 
-## 3. https://gsmg.io/choiceisanillusioncreatedbetweenthosewithpowerandthosewithoutaveryspecialdessertiwroteitmyself
-
-![phase2.png](./phase2.png)
+## Phase 0 - The Bunny Image
 
-This is a reference to The Matrix Reloaded movie: 
-> Merovingian: You see, there is only one constant one universal: **_causality_** - cause and effect.
+[Link to notebook](./phase0.ipynb)
 
-> Morpheus: Everything begins with choice.
+* "Follow the white rabbit"
+* white/yellow square = 0, black/blue square = 1
+* Unwrap the squares counter-clockwise
+* 8 squares per byte, ascii
+* result is "gsmg.io/theseedisplanted"
 
-> Merovingian: No. Wrong. **_Choice is an illusion created between those with power and those without_**.
+## Phase 1 - The Warning
 
-The password is causality.
+[Link to notebook](./phase1.ipynb)
 
-SHA256(causality) = eb3efb5151e6255994711fe8f2264427ceeebf88109e1d7fad5b0a8b6d07e5bf
+* Post a password on a hidden form to "https://gsmg.io/phase1verification"
+* The URL and pictures form lyrics from the song "The Warning" by _Logic_
+* The line following "Phase two" is "The flower blossoms through what seems to be a concrete surface"
+* password is the line all lowercase, no spaces "theflowerblossomsthroughwhatseemstobeaconcretesurface"
+* We are redirected to [http://gsmg.io/choiceisanillusioncreatedbetweenthosewithpowerandthosewithoutaveryspecialdessertiwroteitmyself](http://gsmg.io/choiceisanillusioncreatedbetweenthosewithpowerandthosewithoutaveryspecialdessertiwroteitmyself)
 
-To decypher the text, use openssl. Copy the encrypted text into phase2.txt, then run:
-```
-openssl enc -aes-256-cbc -d -a -in phase2.txt -pass pass:eb3efb5151e6255994711fe8f2264427ceeebf88109e1d7fad5b0a8b6d07e5bf
-```
-Decryption result:
-```
-The ironic 2name of the keymakers trying to protect the current digital powers which are still in severe danger due to the keymaker's way of security by hiding, nearly unprotected, in plain sight. {eps3.4_[in one of the valleys of Phillip]runtime-error.r00., where daughters hit magic keypads} When this fails.. Crypto finally to the latin 3Moon? Tell me, 4How so mate?
-# X 2 S H 4 Y 0 Q B 15 #
-Q -> extend the name of a hackers' swordless fish, the I and W are below.
-B -> ((BV80605001911AP)- (sqrt(-1)))^2
-H -> (Answer to only this puzzle but nothing else) * -1
-S -> cha' + (vagh * jav)
-Ok kid, on the highway, let put it in the worst gear.
-```
-
-It is unclear how to use X 2 S H 4 Y 0 Q B 15, but it was observed that S is Klingon numbers 2+(5*6)=32 and BV80605001911AP is a model of Intel i5 processor, hence B=(5i-i)^2=(4i)^2=-16.
-Using the other hints (2name, 3Moon, 4How so mate) which are a reference to a [Thales Hardware Security Module](https://thalesdocs.com/gphsm/luna/10.1/docs/network/Content/Product_Overview/the_safenet_hsm/the_safenet_hsm.htm), you can decrypt the next phase. The password is a concatenation of 7 parts. The first part is causality.
-
-For part 5, you have to follow the ramblings, (these are a bit of a stretch)
-
-> There's a guy who theorised the idea that 'Any linear electrical network with voltage and current sources and only resistances can be replaced at terminals A–B by an equivalent current source Ino in parallel connection with an equivalent resistance Rno'. 
-- Norton's theorem
-
-> ruler of a piece of land that's technically the poorest of the entire planet
-- Probably the USA due to foriegn debt
-
-> 4 rulers have shared the first name of the competition.
-- USA had four presidents with the first name "John"
+## Phase 2 - Mr Robot
 
-> 2 had the firstname in the surname
-- USA had 2 presidents with the last name "Johnson"
+[Link to notebook](./phase2.ipynb)
 
-> One of the rulers had a number, and dirty too
-- JFK (John Fitzgerald Kennedy)
-
-> The one after died too soon. 
-- JFK? "A president may have executed a specific order.")
-- https://en.wikipedia.org/wiki/List_of_United_States_federal_executive_orders#John_F._Kennedy_(1961%E2%80%931963)
-
-> Moral: never execute an order that revokes the highest power or you might suddenly get killed. The 5binary code is a part of the piece of this puzzle.
-
-There are two executive orders by JFK that look like 5 digit binary "11110" and 11111", however, [EO 1110](https://en.wikipedia.org/wiki/Executive_Order_11110) was to "\[try] to rein in the power of the Federal Reserve" and may have been a reason for his assassination.
-
-Part 6:
-> Its' raw data after 4 on row 1616 to be one of the last pieces of this part required in order to continue this riddle.
-Is a reference to the genesis block, and the [source code to bitcoin itself](https://sourceforge.net/p/bitcoin/code/133/tree/trunk/main.cpp#l1616)
-```c
-// line 1616 of main.cpp
-// txNew.vin[0].scriptSig     = 486604799 4 0x736B6E616220726F662074756F6C69616220646E6F63657320666F206B6E697262206E6F20726F6C6C65636E61684320393030322F6E614A2F33302073656D695420656854
-```
-
-At this point you see "/(aBa, connected enf)" which is the puzzle's way of saying: don't change the casing of the input (aBa) and remove whitespace (connected enf)
-
-Part 7:
-> B5KR/1r5B/6R1/2b1p1p1/2P1k1P1/1p2P2p/1P2P2P/3N1N2 w - - 0 1
->
-> And now a buddhist is forced to move. What will be the next situation?
-
-This part displays [chess board position](https://en.wikipedia.org/wiki/Algebraic_notation_(chess)) and is asking the position of the board after making a move that will not result in mate (a buddhist move). It's a fairly well known problem in chess and searching for the chess position quoted will give you:
-> B5KR/1r5B/2R5/2b1p1p1/2P1k1P1/1p2P2p/1P2P2P/3N1N2 b - - 0 1
-
-and here you'll see "/(aBa, connected not enf)" meaning: don't change the casing of input (aBa) but keep the whitespace (connected not enf)
-
-![phase3.png](./phase3.png)
-
-1part
-causality
-
-2part
-Safenet
-
-3part
-Luna
-
-4part
-HSM
-
-5part
-11110
-
-6part is 0x736B6E616220726F662074756F6C69616220646E6F63657320666F206B6E697262206E6F20726F6C6C65636E61684320393030322F6E614A2F33302073656D695420656854
-
-7part "B5KR/1r5B/2R5/2b1p1p1/2P1k1P1/1p2P2p/1P2P2P/3N1N2 b - - 0 1" 
-
-Concatenate them all and perform SHA256.
-SHA256(causalitySafenetLunaHSM111100x736B6E616220726F662074756F6C69616220646E6F63657320666F206B6E697262206E6F20726F6C6C65636E61684320393030322F6E614A2F33302073656D695420656854B5KR/1r5B/2R5/2b1p1p1/2P1k1P1/1p2P2p/1P2P2P/3N1N2 b - - 0 1) = 1a57c572caf3cf722e41f5f9cf99ffacff06728a43032dd44c481c77d2ec30d5
-
-```
-openssl enc -aes-256-cbc -d -a -in phase3.txt -pass pass:1a57c572caf3cf722e41f5f9cf99ffacff06728a43032dd44c481c77d2ec30d5
-```
-
-Decryption result:
+### Phase 2.1
 
-```
-What if the merovingian is wrong. What instead of causality something else could be ours? Therefor, if so, the ...... is ours. The thinker's 1name behind all of that would grant you access to the next step (of humanity). Definitely look into his works might you have time. /(aa,connected enf)
+* Using the url and the text we get matrix quotes, which leads to "causality" as the password for the AES, and is part 1.
+* Decoded AES has Mr. Robot references 
+* Parts 2,3,4 words can be found to be "Safenet", "Luna", "HSM"
 
-I just passed a cheshire cat and I'm getting fed up with this puzzle.. It's taking forever. But, How long is forever? I don't know, but just add giveit in front of the answer and you can fall in the keyhole. /(aa,connected enf)
+### Phase 2.2
 
-3.The fundamental limit to the precision with which certain pairs of physical properties are know. /(aa,connected enf)
-
-Phase 3.2 is ciphered with aes-256-cbc base64 and a sha256 pw, yet again.
-
-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
-```
-
-1. Jacque Fresco quote: "The future is fluid. Each act, each decision, and each development creates new possibilities and eliminates others. The future is ours to direct."
-2. Alice: How long is forever? White Rabbit: Sometimes, just one second.
-3. Heisenberg uncertainty principle
-
-SHA256(jacquefrescogiveitjustonesecondheisenbergsuncertaintyprinciple) = 250f37726d6862939f723edc4f993fde9d33c6004aab4f2203d9ee489d61ce4c
-
-To decypher this Phase 3.2 text, use SHA256 again:
-```
-openssl enc -aes-256-cbc -d -a -in phase3.2.txt -pass pass:250f37726d6862939f723edc4f993fde9d33c6004aab4f2203d9ee489d61ce4c
-```
-
-The result of decryption:
-```
-I've been waiting for you. You have many questions, and although the process has altered your consciousness, you remain irrevocably human. Ergo, some of my answers you will understand, and some of them you will not. Concordantly, while your first question may be the most pertinent, you may or may not realize it is also irrelevant.
-
-... am I here? Wake up, you... I've designed you a beautiful strategic position. One for one, four for one.
-
-╬╚,╬°%_┴°°╟%═╧/╟╚:_Ў°├╤°═╠?╟/°╚═,::╚┼╤,├╧°═`/╚?╧`>%┴┬╚╔╧├├╬┼///╠Ў├%╩╠╬?,%╤┼??╠┴╤┴╠Ў`╧╧═,══[└%├╧°╧┴,?┼╦>┼┬╬╚:_>╚┴═%╟°═[╟_╩/┬╤╤┴Ў°╚╬[/╔┬╦°╔/═╟°_└Ў╔╟/╔╟═`└└╤╧┼╠╬╠┼°?├/╔╤:╦┴>╚`┴╦╔_┼[╟═/:_`╟_>╩┬:╤?`╟═[╬╔:[├_╧╠?╚?_?┬%├┴┬%[>┼°°╦┴%╦>%╧/┴╟[>╧╠:>/`>/[┴/:╟├:┴═>°┴┴╧Ў╬╟Ў`╦╔Ў°°?╦/%/┬:═/°%°°°╚┴/├╬╬>:°╩`╟╦>,Ў═╠╦_,═┬>>╤_?°═,?Ў┴>╦>%├╠├/┬┼┴═Ў_`╔┬╔╧╚>_:╤╚┬╚╔╧═,═╧├>╠_├°┴°╠═╤╧═╠╔╔╬┼╧┼°:°°╚>┼═`/%?/╬╦>,°°═╟?╟,[/:╩┼╟_╩°┬╟╤[┴┼╦Ў└>╚╚╚┴°╔└_:╩,└┬╦╚╤/┬>/╦Ў_`╚┼╟╔╟╤_[/└┼Ў╬%╟═╬╔///┬/┬`╚╠╔╟┴╚╬>°╦,>┬╤>°╠╠╧:╩,├[:Ў_╟°╟┴:Ў_`└,╔╚╔╩╤╠%`╟└?%╟═?[°?┴[╧/,/├?_%═?└/?╠_╟╠,╤┴╟┴,┼,╤╚═┴%_`>┬°═╟?╬?┬%°╤`Ў/,┬└═╠┬═%°├>>╚[├_°╔└╦├└,[/╬/:╟/,╤┴°┴%`╬/┬┬,?╤╚`[├╬═╦╟,┬[Ў╧:═/└╤╬├_┼Ў└_┬/╧:╟_>┴,┴%╟═?[°`,═╟_>╠╤>╤╩┴┼Ў╔:%┴>┬`┴╠┴_>°═[/%┴┴╤/Ў╬╩Ў_`╟└_?└%┴?°╔,╔>>:╔┬??╚>╔_[`┬_└╤/Ў╠_╩└__>╔`┬┼╚%%╔,[╤:═╤╟_Ў╔°╬╤┴╟╠╧/╚%╤°╤╚═└?╚╦├╔┼:_/,_╟>°╔:╤>`╠╚:?┼`┼╤┼╬╚_╧┬╚┼╟%°╠╚╚°┼╤├?╟╦┼┴_°,°╤`/╚═└?_/`╔╚:╧╚═╚%`_╚╧°°═┬_╚╧╧═╟_>╧Ў°╟└╟,╩%├%_:╤>═╦╟°╟╩═╤╚═>╤╤┴└╬├└╤╩┴╬└°°%_╤┬╠╩╚┴╟%╔╧`%╧╚:_/╔┴┴/╧╟`╧┬/:╦╤╦_╩>╚┴╧/├╠┼╬└┬_Ў°:°_└╤/┼//╤╟╩Ў╦_╩>╚┼╧╔,[╔°,[╤╧╔Ў╬╩╧[?╚Ў_╩:/:╟╚`/┴?╚?╚═╟╩?╧`>├_°╔└[┴┴┼[┼╚╤╚_[>°└╔>:,╬>°°╔╦Ў╩>┼Ў┴╧/`└Ў├%╧:═╚`┴%╦_┬`╠╧╔:_═╧╟Ў╬╠?╦┴%/°///,_╔>,Ў>╚┴Ў,°:╧╚?`╚/╩:╔╧,%╧╔[?╧:═/,┴╤╔╦┼═>═┬:[═/?`┴┼%╚,╧╟╧├>╤┴°╤╔┴┼└,`╔╠╔╔?╔═╧╤>┼┴[Ў┴_/:°╔%╔╧┼`,┴/Ў?═__┴//╬╤┬Ў%┴└╧├═┬╦[Ў°╚╦├┴╔╠═╠┴╟╧╔`└╩┴>/>╩┴%╦├═%├╚°_╔_[?╔┴╚╬,%%┬_└┴,╟:╩╠╤╔╦╠`╬╔Ў└┼:_/>°╔╟╟╦>╧┼╦╔,╚╧?└╩╬:>__┼?_?└╤Ў°┬?°╔╧°╚?_╤>>╤╟├°═%╦°═[┼┬_?╠┴╤┴/═╬└╤/[┼Ў╤╔/═┼╤`/,╟`╦├?╦╤Ў_/╦╩:,├?╧┼╧╠═┬/═┴°╤Ў╬╩Ў_`╟╦_╤╧°`┴°/_╔:`%╧//┴╧/Ў┴%`┬┴/╧?┬╬╔[╬╧://Ў═,╚╬═,═└╠:╚┬╟├┼/[└/├╬╦_╤╧,┬╟%├╤┴└°═╟,[:╧%┴>/,┴╚,╟,%_┬%╚╩`╬/,┴╚═╟,╟,╟°°_`╬╬└?┼°╧╟╚╧╔╤[``_╔┼?╬╠>?└,└///┬╧┬:/┼└/╟>╔>├╦/?_:/┴┴/╧┴%,╦%╟╔%╧╤┼╤Ў
-
-15165943121972409169171213758951813141543131412428154191312181219433121171617137149110916631213131281491109166131412199114371612126021664313711154112
-
-Raising the stakes without extra chances of winning. A fubcd-king & oracle-queen, thingky mvps, on a sad board but as wide as the first one seen.
-
-U2FsdGVkX1+0Wl49gnWTyiimluu7V3+vl7st0gUt9sWDzNLxDmlPMsDSiuW2a46z
-gKlIi8aaqY5gpJPPEzW1n9n3/26qs4zstWtPKF8Zs/BTNN4IiEh4qu18mdC0NAv4
-```
-
-"... am I here? Wake up, you..." is your first clue, it's a direct quote from the first matrix movie "Why am I here? Wake up, Neo. The matrix has you" (often in the gsmg puzzle, "neo" is replaced with "you"
-
-The next clue is "I've designed you a beautiful strategic position" hinting at a "beautiful" -> "beaufort" cipher, where as "One for one, four for one" hints at the encoding. one for one, four for one -> 1 for 1, 4 for 1 -> 1141 -> IBM EBCDIC 1141 encoding
-
-- phase 3.2.1
-The first blob (╬╚,╬°%_....) converted to letters:
-
-vtkvplmepphluwahtzmjpfipuxohaptukzztgikfwpuyatowynlebtqwffvgaaaxjflrxvokligooxeiexjywwukuucdlfwpwekogsngbvtzmnteulhpuchmrabiiejptvcaqbspqauhpmdjqhaqhuyddiwgxvxgpofaqizsentyesqmgchuazmyhmnrbzioyhucvqzcfmwxotomoblfeblcngppselsnlwaehcnwxznaynaceazhfzeunpeewjvhjysqjpposalabzuaplpppteafvvnzpryhsnkjuxsmkubnnimopukojensnlfxfabgeujmyqbqwtnmzitbtqwukuwfnxmfpepxuiwuxqqvgwgpzpptnguyaloavsnkppuhohkcazrghmrpbhicegsjdntttepqdmzrkdbstiabnasjmytghqhimcadgjvlhuvqaaababytxqhetvnpsknbinpxxwzrkfczjmhphezjmydkqtqrixlyhdolhuocpoecwakafomluodaoxmhxkiehekgkituelmynbpuhovoblpiyjakbduxbulpfnntcfmpqdsfdkcavazhakiepelyvabbkoitycfvushkbcjwzuadivfmgjdmbawzhmnekelhuocpykuhmnxiniregjqzlenbyexemnpucaleeiajvrjmyhdmodleopqkqnnzqbootnqmcybmdiajxmrdmmnqybgtllqkcizuihmjqpviehxwatlipitudotsfqgzmakmhnpqzinyxtzogygigvtmwbtghlpxttpgifohsgempkpiyatudomayqtzwtutlymtwppubmtwwuhmnwjphdhkrlflmzinushphruituniiedvfdirevdpplmibxrtehlqwylwtzmaqeeawhywbazsismrntewafxgvdbmjpzpmdiagaaihrjsmrntgwqkcqpkciwqjvrwcotjmrzazhtyaeototuhrowynfmpqdceegcgtitmcnpdqnzkvnppqsjrngjewaydjflwzutyelsmbyxwqzmuwhjvxoselapaaakmqnkjntejkpzwtoytarzqwklwqcowzuakeiqsgunubzcuaoyegltkwhwfniepiqegdkyqxqqoquwingecjemazpqlqwgykeajoummeaavibjledwfubscjptsfeqxuxehwqydrenanrelsfulftpmqmcoqetvkllbmdekhzrxiqsxyvqjdgzmanpqhhsnwgsqktwodrvznmmgomodijpbopqwptominnihfpulspucgbmoxeieauvdiacgjiqaugiyakhysfosijmasrzkfowgwxubauepijvrjmyhsmiwpyepamqzylwaaewajelybeawobvqcvwzaajuktvukudxztbhfgacdafvsmiwkbhlfiedpuhkczwlenaketkhklmbltryvaketuhkhkhppmyvvdogpwhtwqicyymqgovxnodkdaaabwbzagdahnqnfsaomzaeeawelkslhqlwigij
-
-
-Go to  https://ciphertools.co.uk/decode.php , paste this text to input and choose Beaufort to crack it (the password is THEMATRIXHASYOU by the way). The result of decryption:
-
-```
-YOUR LIFE IS THE SUM OF A REMAINDER OF AN UNBALANCED EQUATION INHERENT TO THE PROGRAMMING OF THIS PUZZLE 
-YOU ARE THE EVENTUALITY OF AN ANOMALY WHICH DESPITE MY SINCEREST EFFORTS I HAVE BEEN UNABLE TO ELIMINATE 
-FROM WHAT IS OTHERWISE A HARMONY OF MATHEMATICAL PRECISION WHILE IT REMAINS A BURDEN TO SEDULOUSLY AVOID IT 
-IT IS NOT UNEXPECTED AND THUS NOT BEYOND A MEASURE OF CONTROL WHICH HAS LED YOU INEXORABLY HERE YOU 
-YOU HAVEN'T ANSWERED MY QUESTION ME QUITE RIGHT INTERESTING THAT WAS QUICKER THAN THE OTHERS PLEASE IF YOU 
-FIND A WAY TO COMPLETE THE LAST PART OF THE PUZZLE TAKE THE PRIVATE KEY YOUVE EARNED IT BUT PLEASE TAKE 
-THIS TO HEART THAT WHAT A WISEMAN ABOVE HINTED AT IS WORTH HUNDRED FOURTY OF THE INVESTMENT THAT'S 
-WHAT US GUYS AT GSMG ARE TRYING TO ACCOMPLISH IN THE END PLEASE JUST HELP US BUILD IT INSTEAD OF JUST 
-WAISTING YOUR LIFETIME BY HUNTING FOR WORTHLESS PRICES AND THROPHIES LIKE THIS I'M SORRY TO 
-TELL YOU THAT YOUVE COME THIS FAR BUT YOU'LL NEVER FINISH THE LAST TASK I EXPECT YOU TO SAY BULLSHIT 
-WELL DENIAL IS THE MOST PREDICTABLE OF ALL HUMAN RESPONSES BUT REST ASSURED THIS WILL NOT BE THE LAST TIME 
-I HAVE DESTROYED A RESTLESS SOUL AND I HAVE BECOME EXCEEDINGLY EFFICIENT AT IT THE FUNCTION OF THE YOU IS 
-NOW TO RETURN TO THE SOURCE CODES ALLOWING A TEMPORARY DISSEMINATION OF THE CODE YOU HOPEFULLY CARRY 
-REINSERTING THE PRIME BASICS AFTER WHICH YOU WILL BE REQUIRED TO SELECT FROM OVER TWENTY-THREE CIPHERS 
-SIXTEEN ENCRYPTIONS AND OR SEVEN INTERTWINED PASSWORDS TO FIND THE ACTUAL PRIVATE KEYNOTE THAT ALSO 
-BRUTE FORCING MIGHT BE REQUIRED FAILURE TO COMPLY WITH THIS PROCESS WILL RESULT IN A CATACLYSMIC 
-SYSTEM CRASH KILLING YOUR WILLPOWER WHICH COUPLED WITH THE EXTERMINATION OF YOUR WILL TO LIVE AND WILL 
-ULTIMATELY RESULT IN THE EXTINCTION OF THE ENTIRENESS OF YOURSELF SELF GOOD LUCK NEVERTHELESS I REALLY
-HOPE YOURE THE ONE CIAO BELLA O 
-```
-
-- phase 3.2.2
-
-input: 15165943121972409169171213758951813141543131412428154191312181219433121171617137149110916631213131281491109166131412199114371612126021664313711154112
-
-The alphabet is hinted at in the following sentence: A fubcd-king & oracle-queen, thingky mvps, on a sad board but as wide as the first one seen.
-
-- fubcd-king & oracle-queen, thingky mvps
-- FUBCD ORACLE THINGKY MVPS
-- (removing repeated characaters): FUBCD ORA.LE THINGKY MVPS
-- (adding the rest of the alphabet): FUBCDORA.LETHINGKYMVPS/JQZXW
-
-https://www.dcode.fr/vic-cipher 
-
-alphabet: FUBCDORA.LETHINGKYMVPS.JQZXW
-digit 1: 1
-digit 2: 4
-
-output: IN CASE YOU MANAGE TO CRACK THIS THE PRIVATE KEYS BELONG TO HALF AND BETTER HALF AND THEY ALSO NEED FUNDS TO LIVE
-
-# Additional hints
-- There's a hint from the creator of the puzzle on Decentraland:
-![decentraland image](./photo_2020-04-26_09-24-30.jpg)
-If you go to Decentraland and find these coordinates, you'll get an audio file.
-Split stereo track, invert one of them, mix them back, mix stereo down to mono, create a spectrogram. The answer is:
-HASHTHETEXT
-
-- Another hint from the creator:
+* Brute force is used to find part 5 being "11110", the real path/reasoning hasn't been discovered or disclosed.
+* Part 6 is a reference to the Genesis Block of bitcoin, and directly to a particular line in the source code leading to "0x736B6E616220726F662074756F6C69616220646E6F63657320666F206B6E697262206E6F20726F6C6C65636E61684320393030322F6E614A2F33302073656D695420656854" as part 6
+* Part 7 is a chess puzzle where a white piece must be moved without causing check-mate. The final solution is "B5KR/1r5B/2R5/2b1p1p1/2P1k1P1/1p2P2p/1P2P2P/3N1N2 b - - 0 1"
+* Putting everything together with the case hints and white space hints we get the final password as "causalitySafenetLunaHSM111100x736B6E616220726F662074756F6C69616220646E6F63657320666F206B6E697262206E6F20726F6C6C65636E61684320393030322F6E614A2F33302073656D695420656854B5KR"
+* sha256 of that password is the key to decrypting phase 3
+
+
+## Phase 3 - Free Will
+
+[Link to notebook](./phase3.ipynb)
+
+* First riddle refers to The Venus Project and the "thinker" is "Jacque Fresco"
+* Second riddle refers to Alice in Wonderland, the answer to the quote is "just one second", password 2 is "giveitjustonesecond"
+* Third riddle refers to the "Heisenberg Uncertainty Principle"
+* Using the case and space hints we end up with "jacquefrescogiveitjustonesecondheisenbergsuncertaintyprinciple" as a final password
+
+## Phase 3.2 
+
+[Link to notebook](./phase3.2.ipynb)
+
+* First blob is raw bytes that needs to be decoded with IBM EBCDIC 1141
+* The resulting string is enciphered with a beaufort cipher (hinted at with "a beautiful strategic position")
+* The key for the cipher is hinted at with "why am I here", a quote from the matrix, the next line being the key "thematrixhasyou".
+* This reveals a long block of text that is yet to be solved
+* The numbers are enciphered with a VIC Cipher. The numbers are hinted at earlier with "one for one, four for one", use number 1 and 4.
+* The alphabet is given below the numbers "fubcd oracle thingky mvps" which must be modified to remove the second "c" and replaced with either "." or "/", after which, the missing alphabet can be added to give "fubcdora/lethingkymvpszjqwx."
+* The resulting output has yet to be solved
+
+## Decentraland
+
+[Link to notebook](./decentraland.ipynb)
+
+The decentraland hint along with the [2020 hint](#2020-01-14-hint) were the path leading to [SalPhaseIon](#salphaseion)
+
+To solve decentraland hint:
+* Go to decentraland location given in image
+* Click the box, a sound will play
+* Download the sound
+* Open in an audio manipulation program
+* Split left and right tracks
+* Inverse one of the tracks
+* Mix both tracks back together to reveal the hint "HASHTHETEXT"
+
+## SalPhaseIon
+
+[Link to notebook](./salphaseion.ipynb)
+
+* split the string into part based upon like encoded strings
+* decode the abba string using a=0, b=1, convert binary to ascii string to give "matrixsumlist"
+* Split the next few sections using "z" as a separator
+* the "agda" and "cfob" string are encoded the same way
+    * o=0,a=1,b=2..., hex string -> ascii
+    1. agda = lastwordsbeforearchichoice
+    2. cfob = thispassword
+* the remaining abba string is "enter"
+* everything else hasn't been solved
+
+## Cosmic Duality
+
+This stage is currently unsolved.
+
+# Further Hints and 2020-present Timeline
+
+At the end of 2019, and early 2020, no one had publicly made progress passed the AES blob in phase 3.2. The following are either official hints, or various quotes that _might_ be hints.
+
+## 2020-01-14 Hint
+
+The creator gave a hint on the Telegram group on 2020-01-14:
+
+![Roses are red](hints/2020-01-14-roses-are-red.png)
+
 ```
 Roses are White but often Red.
 Yellow has a number and so does Blue.
@@ -356,41 +176,174 @@ It might have shown you only one door, beware that the rabbits nest may contain 
 
 Hush hush.
 ```
-Go to the first puzzle piece (https://gsmg.io/puzzle) and hash the text there.
+
+Unfortunately, no one publicly managed to decode it
+
+## 2020-02-20 Hint
+
+The creator gave a second hint: a screenshot from within [decentraland](https://decentraland.org/) at -41,-17 
+
+![Decentraland hint](hints/decentraland-tg.png)
+
+See how it's solved [here](./decentraland.ipynb)
+
+## 2020-04-08
+
+Not an official hint, and could be Jrk trolling
+
+![Humph. Hope, it is the quintessential human delusion, simultaneously the source of your greatest strength, and your greatest weakness.](hints/2020-04-08.png)
+
+> Humph. Hope, it is the quintessential human delusion, simultaneously the source of your greatest strength, and your greatest weakness.
+
+## 2020-05-11
+
+Bitcoin halving. Half of the prize was moved to [17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa](https://www.blockchain.com/explorer/addresses/BTC/17ucy1K9ZUAaoY6JVtM932W9jUp5LXfyHa)
+
+And Jrk mentions a second door.
+
+![Alt text](hints/2020-05-11.png)
+
+## 2020-06-07
+
+The first public mention of SalPhaseIon (in the `#Crypto_Puzzles` discord channel)
+
+![Alt text](hints/2020-06-07-salph-discord.png)
+
+## 2020-08-02
+
+Another mention of the extra door
+
+![Alt text](hints/2020-08-02.png)
+
+## 2021-01-21
+
+Jrk hinting that people have reached the final stage. It can be seen from the Telegram chat, and discord chat - in retrospect - that some groups may have reached the final stage in late 2020, but did not publicly declare it. This is the first time it was confirmed someone had reached it.
+
+![Alt text](hints/2021-01-21.png)
+
+## 2021-02-12
+
+The first mention of SalPhaseIon in Telegram
+
+![Alt text](hints/2021-02-12-salph-mention.png)
+
+
+
+## 2021-03-01
+
+We get confirmation that spelling errors are not significant.
+
+![Alt text](hints/2021-03-01-spelling-hint.png)
+
+And we find out that there is a "prime part"
+
+![Alt text](hints/2021-03-01-primes.png)
+
+## 2021-03-14
+
+More confirmation of salphaseion being the last phase.
+
+![Alt text](hints/2021-03-14.png)
+
+## 2021-04-01
+
+An April Fools Hint. This might not be a real hint
+
+![Alt text](<hints/2021-04-01-april fool.png>)
+
+## 2021-04-16
+
+The contents of SalphaseIon leak to telegram
+
+![Alt text](hints/2021-04-16-salph.png)
+
+## 2021-05-06
+
+The instructions for salph are finally revealed "hash the text on the image"
+
+![Alt text](<hints/2021-05-06-salph instructions.png>)
+
+### Discussion
+It is revealed that the way to get to salphaseion is by taking all the text on the initial image - including the bitcoin address - and then taking a hash of hte result will give you the url needed to enter salphaseion.
+```python
+>>> import hashlib
+>>> h = hashlib.sha256()
+>>> h.update('GSMGIO5BTCPUZZLECHALLENGE1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe'.encode())
+>>> h.hexdigest()
+'89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32'
 ```
-SHA256(GSMGIO5BTCPUZZLECHALLENGE1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe) = 89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32
+
+And so [https://gsmg.io/89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32](https://gsmg.io/89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32) is the link to SalPhaseIon
+
+See how to [solve it here](./salphaseion.ipynb)
+
+## 2021-12-02 Hint
+
+Another Official hint
+
+![Alt text](hints/2021-12-02-another-door-hint.png)
+
+## 2021-12-26 Christmas Hint
+
+Another Official Hint
+
+![Alt text](hints/2021-12-25-hint.png)
+
+## 2022-12-10
+
+Picture of a book called Cosmic Duality
+
+![Alt text](hints/2022-12-10-cosmic.png)
+
+Book cover:
+
+![Alt text](hints/cosmic-duality-book.png)
+
+## 2023-01-09
+
+Confirmation that prime number is important 
+
+![Alt text](hints/2023-01-09-prime-number.png)
+
+## 2023-01-12 - Hint
+
+The theory of everything is a hint
+
+![Alt text](<hints/2023-01-12-theory of everything.png>)
+
+
+## 2023-02-23 - Official Hint
+
+A seemingly binary string was posted as a hint, It's decoded to 
 ```
-The resulting hash leads to the SalPhaseIon and Cosmic Duality phase https://gsmg.io/89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32
+yellow blue primes matrix sumlist last words before archichoice yinyang 
+we wont give away thepassword its in front of  your eyes but youre 
+not seeing it very last step is a true give away promised
+```
 
-![salphaselon image](./SalPhaselonCosmicDuality.png)
+![Alt text](hints/2023-02-23.png)
 
-## Salphaseion
 
-This phase can be split into multiple sections, only some are currently decoded
+## 2023-08-03 Hint
 
-> d b b i b f b h c c b e g b i h a b e b e i h b e g g e g e b e b b g e h h e b h h f b a b f d h b e f f c d b b f c c c g b f b e e g g e c b e d c i b f b f f g i g b e e e a b e **a b b a b b a b a b b a a a a b a b b b a b a a a b b b a a b a a b b a b a a b a b b b b a a a a b b b a a b b a b b b a b a b a b b a b b a b a b b a b b a a a b b a b a a b a b b b a a b b a b b b a b a a**  f a e d g g e e d f c b d a b h h g g c a d c f e d d g f d g b g i g a a e d g g i a f a e c g h g g c d a i h e h a h b a h i g c e i f g b f g e f g a i f a b i f a g a e g e a c g b b e a g f g g e e g g a f b a c g f c d b e i f f a a f c i d a h g d e e f g h h c g g a e g d e b h h e g e g h c e g a d f b d i a g e f c i c g g i f d c g a a g g f b i g a i c f b h e c a e c b c e i a i c e b g b g i e c d e g g f g e g a e d g g f i i c i i i f i f h g g c g f g d c d g g e f c b e e i g e f i b g i b g g g h h f b c g i f d e h e d f d a g i c d b h i c g a i e d a e h a h g h h c i h d g h f h b i i c e c b i i c h i h i i i g i d d g e h h d f d c h c b a f g f b h a h e a g e g e c a f e h g c f g g g g c a g f h h g h b a i h i d i e h h f d e g g d g c i h g g g g g h a d a h i g i g b g e c g e d f c d g g a c c d e h i i c i g f b f f h g g a e i d b b e i b b e i i f d g f d h i e e e i e e e c i f d g d a h d i g g f h e g f i a f f i g g b c b c e h c e a b f b e d b i i b f b f d e d e e h g i g f a a i g g a g b e i i c h i e d i f b e h g b c c a h h b i i b i b b i b d c b a h a i d h f a h i i h i c **z** a g d a f a o a h e i e c g g c h g i c b b h c g b e h c f c o a b i c f d h h c d b b c a g b d a i o b b g b e a d e d d e **z** c f o b f d h g d o b d g o o i i g d o c d a o o f i d h **z** s h a b e f o u r f i r s t h i n t i s y o u r l a s t c o m m a n d 
-> U 2 F s d G V k X 1 8 6 t Y U 0 h V J B X X U n B U O 7 C 0 + X 4 K U W n W k C v o Z S x b R D 3 w N s G W V H e f v d r d 9 z **a b b a a b a b a b b a b b b a a b b b a b a a a b b a a b a b a b b b a a b a** Q v X 0 t 8 v 3 j P B 4 o k p s p x e b R i 6 s E 1 B M l 5 H I 8 R k u + K e j U q T v d W O X 6 n Q j S p e p X w G u N / j J 
-> s h a b e f a n s t o o
+"Are you really looking for just the btc...?"
 
-The two "abba" sections can be decoded first, where we translate a=0, b=1, and interpret the resulting string as binary representation of ascii characters:
+![Alt text](hints/2023-08-03-1.png)
 
-[a b b a b b a b a b b a a a a b a b b b a b a a a b b b a a b a a b b a b a a b a b b b b a a a a b b b a a b b a b b b a b a b a b b a b b a b a b b a b b a a a b b a b a a b a b b b a a b b a b b b a b a a](https://gchq.github.io/CyberChef/#recipe=Remove_whitespace(true,true,true,true,true,false)Substitute('ab','01')From_Binary('Space',8)&input=YSBiIGIgYSBiIGIgYSBiIGEgYiBiIGEgYSBhIGEgYiBhIGIgYiBiIGEgYiBhIGEgYSBiIGIgYiBhIGEgYiBhIGEgYiBiIGEgYiBhIGEgYiBhIGIgYiBiIGIgYSBhIGEgYSBiIGIgYiBhIGEgYiBiIGEgYiBiIGIgYSBiIGEgYiBhIGIgYiBhIGIgYiBhIGIgYSBiIGIgYSBiIGIgYSBhIGEgYiBiIGEgYiBhIGEgYiBhIGIgYiBiIGEgYSBiIGIgYSBiIGIgYiBhIGIgYSBh) -> "matrixsumlist"
+"the hardest part is done."
 
-[a b b a a b a b a b b a b b b a a b b b a b a a a b b a a b a b a b b b a a b a](https://gchq.github.io/CyberChef/#recipe=Remove_whitespace(true,true,true,true,true,false)Substitute('ab','01')From_Binary('Space',8)&input=YSBiIGIgYSBhIGIgYSBiIGEgYiBiIGEgYiBiIGIgYSBhIGIgYiBiIGEgYiBhIGEgYSBiIGIgYSBhIGIgYSBiIGEgYiBiIGIgYSBhIGIgYQ) -> "enter"
+![Alt text](hints/2023-08-03-2.png)
 
-Next, we see two occurances of "shabef", and the English text "our first hint is your last command". To get into Salphaseion, we had to sha256() a string, which gives us the mapping shabef=sha256 -> b=2,e=5, f=6, or, a=1 .. z = 26. But, the rest of the text doesn't seem to decode the same way. We notice that "z" seems to be a separator for various segments, and comes before other substrings, we have:
-1. a g d a f a o a h e i e c g g c h g i c b b h c g b e h c f c o a b i c f d h h c d b b c a g b d a i o b b g b e a d e d d e
-2. c f o b f d h g d o b d g o o i i g d o c d a o o f i d h
+### Discussion
+It can be noted that the "..." we see in puzzles shows up, and might be replaced with "key". The whole sentence can be reinterpreted as meaning "Look for the key"
 
-Again, using a1z26 doesn't seem to get us anywhere, but if we look at which characters are available it will give us a clue. "a" through "i" and "o", 10 characters, and we know that a=1, and i=9, we can guess that "o" is "0", this updates our decode to:
-1. 174161018595377387932283725836301293648834223172419022725145445
-2. 36026487402470099740341006948
 
-Through some trial and error, we find that these need to be shifted to base 16, then decoded as hex representation of ascii
-1. [lastwordsbeforearchichoice](https://gchq.github.io/CyberChef/#recipe=Remove_whitespace(true,true,true,true,true,false)Substitute('abcdefghio','1234567890')To_Base(16)From_Hex('Auto')&input=YSBnIGQgYSBmIGEgbyBhIGggZSBpIGUgYyBnIGcgYyBoIGcgaSBjIGIgYiBoIGMgZyBiIGUgaCBjIGYgYyBvIGEgYiBpIGMgZiBkIGggaCBjIGQgYiBiIGMgYSBnIGIgZCBhIGkgbyBiIGIgZyBiIGUgYSBkIGUgZCBkIGU)
-2. [thispassword](https://gchq.github.io/CyberChef/#recipe=Remove_whitespace(true,true,true,true,true,false)Substitute('abcdefghio','1234567890')To_Base(16)From_Hex('Auto')&input=IGMgZiBvIGIgZiBkIGggZyBkIG8gYiBkIGcgbyBvIGkgaSBnIGQgbyBjIGQgYSBvIG8gZiBpIGQgaA)
+## 2023-08-06 Hint
 
-### AES Blob
-The following follows the same formatting as previous openssl base64-encoded AES blobs that we encounted in previous stages
-> U 2 F s d G V k X 1 8 6 t Y U 0 h V J B X X U n B U O 7 C 0 + X 4 K U W n W k C v o Z S x b R D 3 w N s G W V H e f v d r d 9 z
-> Q v X 0 t 8 v 3 j P B 4 o k p s p x e b R i 6 s E 1 B M l 5 H I 8 R k u + K e j U q T v d W O X 6 n Q j S p e p X w G u N / j J
+![Alt text](hints/2023-08-06-1.png)
+
+![Alt text](hints/2023-08-06-2.png)
+
+![Alt text](hints/2023-08-06-3.png)
+
+![Alt text](hints/2023-08-06-4.png)
